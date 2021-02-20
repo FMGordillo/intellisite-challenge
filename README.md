@@ -3,11 +3,13 @@
 ## STACK
 
 - Backend
-  - Prisma (ORM)
   - Express.js + Apollo Server (GraphQL)
-  - PostgreSQL
+  - Typescript
+  - Prisma (ORM) + PostgreSQL
 - Frontend
   - Next.js
+  - Typescript
+  - `styled-components`
   - `swr` + `graphql-request`
 
 ## BACKEND (Server)
