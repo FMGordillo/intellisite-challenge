@@ -18,6 +18,8 @@
 
 1. `npx prisma migrate dev --preview-feature` (this one will create the necessary tables in Postgres, and generate the resolvers + types for GraphQL)
 
+1. `npm run seed` OR using the CLI
+
 1. `npm run server`
 
 ## BACKEND (CLI)

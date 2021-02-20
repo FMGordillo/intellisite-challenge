@@ -1,17 +1,9 @@
 import { NextPage } from "next";
-import useSWR from "swr";
-
-const GET_ANOMALIES = `
-  query getAnomalies {
-    anomalies {
-      module
-    }
-  }
-`;
+import { useAnomalies } from "../hooks";
 
 const IndexPage: NextPage = () => {
-  const { data } = useSWR(GET_ANOMALIES);
-  return <div>Hello world</div>;
+  const { count } = useAnomalies();
+  return <div>Hello world {count}</div>;
 };
 
 export default IndexPage;

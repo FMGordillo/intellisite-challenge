@@ -16,7 +16,12 @@ const startApp = async () => {
     const app = Express();
     const PORT = process.env.PORT || "4000";
     app.use(cors());
-    app.use(helmet());
+    app.use(
+      helmet({
+        // This will allow to use GraphQL Playground (http://localhost:4000/graphql)
+        contentSecurityPolicy: process.env.NODE_ENV !== "production" && false,
+      })
+    );
 
     /**
      * GraphQL
