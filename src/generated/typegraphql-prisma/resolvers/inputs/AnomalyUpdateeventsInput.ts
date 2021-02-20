@@ -6,9 +6,9 @@ import { DecimalJSScalar } from "../../scalars";
 @TypeGraphQL.InputType({
   isAbstract: true
 })
-export class AnomalyWhereUniqueInput {
-  @TypeGraphQL.Field(_type => String, {
-    nullable: true
+export class AnomalyUpdateeventsInput {
+  @TypeGraphQL.Field(_type => [GraphQLScalars.JSONResolver], {
+    nullable: false
   })
-  id?: string | undefined;
+  set!: Prisma.InputJsonValue[];
 }

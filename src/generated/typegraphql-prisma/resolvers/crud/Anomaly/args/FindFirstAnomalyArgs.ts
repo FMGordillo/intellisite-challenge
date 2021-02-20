@@ -35,5 +35,5 @@ export class FindFirstAnomalyArgs {
   @TypeGraphQL.Field(_type => [AnomalyScalarFieldEnum], {
     nullable: true
   })
-  distinct?: Array<"module_id" | "module" | "json_version" | "camera_uuid" | "timestamp"> | undefined;
+  distinct?: Array<"id" | "module_id" | "module" | "module_version" | "json_version" | "events" | "camera_uuid" | "timestamp"> | undefined;
 }

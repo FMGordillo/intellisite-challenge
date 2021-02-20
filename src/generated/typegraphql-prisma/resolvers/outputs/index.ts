@@ -1,15 +1,5 @@
 export { AffectedRowsOutput } from "./AffectedRowsOutput";
 export { AggregateAnomaly } from "./AggregateAnomaly";
-export { AggregateCamera } from "./AggregateCamera";
-export { AggregateEvent } from "./AggregateEvent";
 export { AnomalyCountAggregate } from "./AnomalyCountAggregate";
 export { AnomalyMaxAggregate } from "./AnomalyMaxAggregate";
 export { AnomalyMinAggregate } from "./AnomalyMinAggregate";
-export { CameraCountAggregate } from "./CameraCountAggregate";
-export { CameraMaxAggregate } from "./CameraMaxAggregate";
-export { CameraMinAggregate } from "./CameraMinAggregate";
-export { EventAvgAggregate } from "./EventAvgAggregate";
-export { EventCountAggregate } from "./EventCountAggregate";
-export { EventMaxAggregate } from "./EventMaxAggregate";
-export { EventMinAggregate } from "./EventMinAggregate";
-export { EventSumAggregate } from "./EventSumAggregate";

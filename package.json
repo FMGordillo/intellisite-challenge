@@ -9,7 +9,8 @@
     "cli": "ts-node ./src/cli.ts",
     "cli:dev": "nodemon --watch src/**/* --ext ts --exec 'npm run cli'",
     "server": "ts-node ./src/index.ts",
-    "server:dev": "nodemon --watch src/**/* --ext ts --exec 'npm run server'"
+    "server:dev": "nodemon --watch src/**/* --ext ts --exec 'npm run server'",
+    "seed": "ts-node ./src/seedDb.ts"
   },
   "repository": {
     "type": "git",

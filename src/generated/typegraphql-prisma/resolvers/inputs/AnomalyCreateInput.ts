@@ -2,8 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
-import { CameraCreateNestedOneWithoutAnomaliesInput } from "../inputs/CameraCreateNestedOneWithoutAnomaliesInput";
-import { EventCreateNestedManyWithoutAnomalyInput } from "../inputs/EventCreateNestedManyWithoutAnomalyInput";
+import { AnomalyCreateeventsInput } from "../inputs/AnomalyCreateeventsInput";
 
 @TypeGraphQL.InputType({
   isAbstract: true
@@ -12,7 +11,12 @@ export class AnomalyCreateInput {
   @TypeGraphQL.Field(_type => String, {
     nullable: true
   })
-  module_id?: string | undefined;
+  id?: string | undefined;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: false
+  })
+  module_id!: string;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: false
@@ -22,20 +26,25 @@ export class AnomalyCreateInput {
   @TypeGraphQL.Field(_type => String, {
     nullable: true
   })
+  module_version?: string | undefined;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: true
+  })
   json_version?: string | undefined;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: true
+  })
+  camera_uuid?: string | undefined;
 
   @TypeGraphQL.Field(_type => Date, {
     nullable: false
   })
   timestamp!: Date;
 
-  @TypeGraphQL.Field(_type => EventCreateNestedManyWithoutAnomalyInput, {
+  @TypeGraphQL.Field(_type => AnomalyCreateeventsInput, {
     nullable: true
   })
-  events?: EventCreateNestedManyWithoutAnomalyInput | undefined;
-
-  @TypeGraphQL.Field(_type => CameraCreateNestedOneWithoutAnomaliesInput, {
-    nullable: false
-  })
-  camera!: CameraCreateNestedOneWithoutAnomaliesInput;
+  events?: AnomalyCreateeventsInput | undefined;
 }

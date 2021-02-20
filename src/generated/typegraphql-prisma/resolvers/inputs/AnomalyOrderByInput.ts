@@ -2,13 +2,17 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
-import { CameraOrderByInput } from "../inputs/CameraOrderByInput";
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType({
   isAbstract: true
 })
 export class AnomalyOrderByInput {
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  id?: "asc" | "desc" | undefined;
+
   @TypeGraphQL.Field(_type => SortOrder, {
     nullable: true
   })
@@ -22,12 +26,17 @@ export class AnomalyOrderByInput {
   @TypeGraphQL.Field(_type => SortOrder, {
     nullable: true
   })
-  json_version?: "asc" | "desc" | undefined;
+  module_version?: "asc" | "desc" | undefined;
 
-  @TypeGraphQL.Field(_type => CameraOrderByInput, {
+  @TypeGraphQL.Field(_type => SortOrder, {
     nullable: true
   })
-  camera?: CameraOrderByInput | undefined;
+  json_version?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  events?: "asc" | "desc" | undefined;
 
   @TypeGraphQL.Field(_type => SortOrder, {
     nullable: true

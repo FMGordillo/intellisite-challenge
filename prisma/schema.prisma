@@ -16,29 +16,12 @@ generator typegraphql {
 }
 
 model Anomaly {
-  module_id    String   @id @default(uuid())
-  module       String
-  json_version String   @default("1.1.0")
-  events       Event[]
-  camera       Camera   @relation(fields: [camera_uuid], references: [uuid])
-  camera_uuid  String
-  timestamp    DateTime
-}
-
-model Camera {
-  uuid      String    @id
-  anomalies Anomaly[]
-}
-
-model Event {
-  id             Int      @id @default(autoincrement())
-  uuid           String   @default(uuid()) // Duplicated of { "module": "dv-traffic" } ?
-  images         Json[] // TODO: improve
-  attributes     Json[] // TODO: improve
-  alerts         Json[] // TODO: improve
-  trajectory     Json
-  instance       String   @default("car")
-  anomaly        Anomaly? @relation(fields: [anomaly_id], references: [module_id])
-  anomaly_id     String?
-  module_version String?
+  id             String   @id @default(uuid())
+  module_id      String
+  module         String
+  module_version String?  @default("2.23.0")
+  json_version   String   @default("1.1.0")
+  events         Json[]   @db.JsonB
+  camera_uuid    String   @default("camera-1")
+  timestamp      DateTime
 }

@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs/promises";
 
-export const readEvents = async (): Promise<string | null> => {
+export const readEvents = async (): Promise<Record<string, any>[] | null> => {
   try {
     const file = await fs.readFile(
       path.join(__dirname, "..", "..", "resources", "events.json"),

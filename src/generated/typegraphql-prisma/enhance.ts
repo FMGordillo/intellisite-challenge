@@ -7,9 +7,7 @@ import * as inputTypes from "./resolvers/inputs";
 import * as argsTypes from "./resolvers/crud/args.index";
 
 const crudResolversMap = {
-  Anomaly: crudResolvers.AnomalyCrudResolver,
-  Camera: crudResolvers.CameraCrudResolver,
-  Event: crudResolvers.EventCrudResolver
+  Anomaly: crudResolvers.AnomalyCrudResolver
 };
 const actionResolversMap = {
   Anomaly: {
@@ -23,30 +21,6 @@ const actionResolversMap = {
     updateManyAnomaly: actionResolvers.UpdateManyAnomalyResolver,
     upsertAnomaly: actionResolvers.UpsertAnomalyResolver,
     aggregateAnomaly: actionResolvers.AggregateAnomalyResolver
-  },
-  Camera: {
-    camera: actionResolvers.FindUniqueCameraResolver,
-    findFirstCamera: actionResolvers.FindFirstCameraResolver,
-    cameras: actionResolvers.FindManyCameraResolver,
-    createCamera: actionResolvers.CreateCameraResolver,
-    deleteCamera: actionResolvers.DeleteCameraResolver,
-    updateCamera: actionResolvers.UpdateCameraResolver,
-    deleteManyCamera: actionResolvers.DeleteManyCameraResolver,
-    updateManyCamera: actionResolvers.UpdateManyCameraResolver,
-    upsertCamera: actionResolvers.UpsertCameraResolver,
-    aggregateCamera: actionResolvers.AggregateCameraResolver
-  },
-  Event: {
-    event: actionResolvers.FindUniqueEventResolver,
-    findFirstEvent: actionResolvers.FindFirstEventResolver,
-    events: actionResolvers.FindManyEventResolver,
-    createEvent: actionResolvers.CreateEventResolver,
-    deleteEvent: actionResolvers.DeleteEventResolver,
-    updateEvent: actionResolvers.UpdateEventResolver,
-    deleteManyEvent: actionResolvers.DeleteManyEventResolver,
-    updateManyEvent: actionResolvers.UpdateManyEventResolver,
-    upsertEvent: actionResolvers.UpsertEventResolver,
-    aggregateEvent: actionResolvers.AggregateEventResolver
   }
 };
 

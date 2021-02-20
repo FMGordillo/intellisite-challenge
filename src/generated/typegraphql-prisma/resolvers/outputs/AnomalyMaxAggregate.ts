@@ -10,12 +10,22 @@ export class AnomalyMaxAggregate {
   @TypeGraphQL.Field(_type => String, {
     nullable: true
   })
+  id!: string | null;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: true
+  })
   module_id!: string | null;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
   })
   module!: string | null;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: true
+  })
+  module_version!: string | null;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
