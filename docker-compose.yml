@@ -1,0 +1,9 @@
+services:
+  server:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - node_modules:/usr/src/server/node_modules
+  db:
+    image: postgres:latest
