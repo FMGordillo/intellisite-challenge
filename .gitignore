@@ -1,3 +1,4 @@
 .envrc
+prisma/.env
 dist
 node_modules
