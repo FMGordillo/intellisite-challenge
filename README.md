@@ -1,5 +1,21 @@
 # Fullstack challenge
 
+## Pendings
+
+- [ ] Create `docker-compose.yml` with the FE + BE + DB
+- Backend 
+  - [ ] Handle the "create CSV" part of the challenge
+  - [ ] Improve `Dockerfile` to handle Prisma migrations (aka more steps for the process)
+  - [ ] Finish the interaction with the CLI
+  - [ ] Normalize fallback messages (ie "Cannot fullfill the request" in all the operations)
+  - [ ] Create Swagger API documentation
+- Frontend
+  - [ ] Mock design for the page
+  - [ ] Create the needed components ] SEO
+  - [ ] Create `<Table />` component with sorting
+  - [ ] Add testing with Jest, and Cypress for E2E
+   
+
 ## STACK
 
 - Backend
